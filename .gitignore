@@ -361,3 +361,12 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+# MySelf Add Directories
+.vs/
+bin/
+int/
+
+# MySelf Add files
+.user

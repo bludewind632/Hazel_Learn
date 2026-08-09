@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Hazel_Learn/Hazel_Learn.vcxproj" />
+  <Project Path="Hazel_Learn/Hazel_Learn.vcxproj" Id="b7fe0d05-3596-4390-b5fb-a0575e1c2609" />
+  <Project Path="Sandbox/Sandbox.vcxproj" Id="917dcf0a-f609-4c2e-80a8-6ec4cba03b39" />
 </Solution>
