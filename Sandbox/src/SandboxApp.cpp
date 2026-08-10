@@ -9,9 +9,6 @@ public:
 	~Sandbox() {
 
 	}
-	void Run() {
-
-	}
 };
 
 Hazel::Application* CreateApplication() {

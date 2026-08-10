@@ -11,8 +11,8 @@ namespace Hazel {
 		virtual ~Application();
 		void Run();
 
-		// to be defined in CLIENT
-		Application* CreateApplication();
 	};
 
+	// to be defined in CLIENT
+	Application* CreateApplication();
 }

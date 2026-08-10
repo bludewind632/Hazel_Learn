@@ -5,10 +5,14 @@
 extern Hazel::Application* Hazel::CreateApplication();
 
 int main(int argc, char** argv) {
+
+	Hazel::Log::Init();
+	HZ_CORE_WARN("Initialized Log!");
+	HZ_INFO("Hello!");
 	printf("Hazel Engine\n");
 	auto app = Hazel::CreateApplication();
-	sandbox->Run();
-	delete sandbox;
+	app->Run();
+	delete app;
 }
 
 #else
