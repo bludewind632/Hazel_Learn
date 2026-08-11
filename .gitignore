@@ -366,7 +366,7 @@ FodyWeavers.xsd
 # MySelf Add Directories
 .vs/
 bin/
-int/
+bin-int/
 
 # MySelf Add files
 .user
