@@ -1,9 +1,11 @@
 #pragma once
 
-#include <memory>
+// #include <memory>
+#include "hzpch.h"
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Hazel {
 	

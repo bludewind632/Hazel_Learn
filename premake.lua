@@ -10,6 +10,7 @@ workspace "Hazel_Learn"
 -- Debug-Windows-x64
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- latest = "10.0.28000.2114"
 
 project "Hazel_Learn"
 	location "Hazel_Learn"
@@ -19,12 +20,14 @@ project "Hazel_Learn"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "hzpch.h"
 	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs {
+		"%{prj.name}/src"
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -35,8 +38,8 @@ project "Hazel_Learn"
 		systemversion "10.0.28000.2114"
 
 		defines {
-			"HZ_BUILD_DLL",
-			"HZ_PLATFORM_WINDOWS"
+			"HZ_PLATFORM_WINDOWS",
+			"HZ_BUILD_DLL"
 		}
 
 		postbuildcommands {

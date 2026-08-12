@@ -1,35 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Hazel">
+    <Filter Include="src">
+      <UniqueIdentifier>{63a3dcd1-9fd8-44ea-b4b4-68679b4f8bd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Hazel">
       <UniqueIdentifier>{99294D0D-053E-75BE-CEBF-181E3A9371EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Hazel\Event">
+      <UniqueIdentifier>{3f46c11c-c950-4084-8bcc-e738a603a08d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Hazel.h" />
     <ClInclude Include="src\Hazel\Application.h">
-      <Filter>Hazel</Filter>
+      <Filter>src\Hazel</Filter>
     </ClInclude>
     <ClInclude Include="src\Hazel\Core.h">
-      <Filter>Hazel</Filter>
+      <Filter>src\Hazel</Filter>
     </ClInclude>
     <ClInclude Include="src\Hazel\EntryPoint.h">
-      <Filter>Hazel</Filter>
+      <Filter>src\Hazel</Filter>
     </ClInclude>
     <ClInclude Include="src\Hazel\Log.h">
-      <Filter>Hazel</Filter>
+      <Filter>src\Hazel</Filter>
     </ClInclude>
-    <ClInclude Include="src\Hazel\Events\Event.h" />
-    <ClInclude Include="src\Hazel\Events\MouseEvent.h" />
-    <ClInclude Include="src\Hazel\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Hazel\Events\KeyEvent.h" />
+    <ClInclude Include="src\Hazel\Events\ApplicationEvent.h">
+      <Filter>src\Hazel\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel\Events\Event.h">
+      <Filter>src\Hazel\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel\Events\KeyEvent.h">
+      <Filter>src\Hazel\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel\Events\MouseEvent.h">
+      <Filter>src\Hazel\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hzpch.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazel\Application.cpp">
-      <Filter>Hazel</Filter>
+      <Filter>src\Hazel</Filter>
     </ClCompile>
     <ClCompile Include="src\Hazel\Log.cpp">
-      <Filter>Hazel</Filter>
+      <Filter>src\Hazel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hzpch.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
