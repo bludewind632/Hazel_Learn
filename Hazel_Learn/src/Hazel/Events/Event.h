@@ -19,7 +19,7 @@ namespace Hazel {
 		None = 0,
 		WindowClose, WindowResize, WindowMove, WindowFocus, WindowLostFocus,
 		KeyPressed, KeyReleased,
-		MouseButtonPressed, MouseButtonPressed, MouseMoved, MouseHover, MouseScroll
+		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseHover, MouseScroll
 	};
 
 	enum EventCategory
@@ -62,8 +62,9 @@ namespace Hazel {
 		template<typename T>
 		using EventFn = std::function<bool(T&)>;
 	public:
-		EventDispatcher(Event event) : m_Event(event) {}
-		
+		EventDispatcher(Event& event) : m_Event(event) {}
+		// Abstract Class Event can't be instantiated, The parameter must be referred
+
 		template<typename T>
 		bool Dispatch(EventFn<T> func)
 		{

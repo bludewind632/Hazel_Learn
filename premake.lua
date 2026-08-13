@@ -21,13 +21,15 @@ project "Hazel_Learn"
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "hzpch.h"
+	pchsource "Hazel_Learn/src/hzpch.cpp"
+
 	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs {
-		"%{prj.name}/src"
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -35,7 +37,7 @@ project "Hazel_Learn"
 	filter "system:windows"
 		cppdialect "C++20"
 		staticruntime "On"
-		systemversion "10.0.28000.2114"
+		-- systemversion "10.0.28000.2114"
 
 		defines {
 			"HZ_PLATFORM_WINDOWS",
@@ -45,15 +47,15 @@ project "Hazel_Learn"
 		postbuildcommands {
 			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
-
+-- Debug Version
 		filter "configurations:Debug"
 			defines "HZ_DEBUG"
 			symbols "On"
-
+-- Release Version
 		filter "configurations:Release"
 			defines "HZ_RELEASE"
 			optimize "On"
-		
+-- Distributable Version
 		filter "configurations:Dist"
 			defines "HZ_DIST"
 			optimize "On"
@@ -82,7 +84,7 @@ project "Sandbox"
 	filter "system:windows"
 		cppdialect "C++20"
 		staticruntime "On"
-		systemversion "10.0.28000.2114"
+		-- systemversion "10.0.28000.2114"
 
 		defines {
 			"HZ_PLATFORM_WINDOWS"
@@ -91,6 +93,7 @@ project "Sandbox"
 		links {
 			"Hazel_Learn"
 		}
+
 		filter "configurations:Debug"
 			defines "HZ_DEBUG"
 			symbols "On"
