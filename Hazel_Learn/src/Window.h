@@ -15,13 +15,13 @@ namespace Hazel {
 			unsigned int w = 1280, 
 			unsigned int h = 720) 
 			: Title(title), Width(w), Height(h) {}
-	private:
+
 		std::string Title;
 		unsigned int Width, Height;
 	};
 
 	// A abstract class Window play as a foundation of The Engine's Interface
-	class HAZEL_API Window 
+	class HAZEL_API Window
 	{
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
@@ -35,7 +35,7 @@ namespace Hazel {
 		// Windows attributes
 		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 		virtual void SetVSync(bool enabled) = 0;
-		virtual void IsVSync() const = 0;
+		virtual bool IsVSync() const = 0;
 
 		static Window* Create(const WindowProps& props = WindowProps());
 	};

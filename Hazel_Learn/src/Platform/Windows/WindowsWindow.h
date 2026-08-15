@@ -7,8 +7,8 @@ namespace Hazel {
 	class WindowsWindow : public Window
 	{
 	public:
-		WindowsWindow(WindowProps& props) : () {}
-		virtual ~WindowsWindow() {}	
+		WindowsWindow(WindowProps& props);
+		virtual ~WindowsWindow();
 
 		void OnUpdate() override;
 
@@ -17,6 +17,8 @@ namespace Hazel {
 
 		// Windows attributes
 		inline void SetEventCallback(const EventCallbackFn& back) override { m_Data.EventCallback = back; }
+		void SetVSync(bool enabled) override;
+		bool IsVSync() const override;
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
